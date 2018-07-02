@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bangers', cursive;
+  background: rgba( 66, 72,123,1);
+  padding: 0;
+}
+
+/* Header/Blog Title */
+.header {
+  position: relative;
+  padding: 5px;
+  margin-top: 0;
+  width: 100%;
+  text-align: center;
+  background:rgba(179, 179, 83,1);
+}
+
+.header h1 {
+  font-size: 50px;
+  /* padding: 10px; */
+  /* margin: 10px; */
+}
+
+/* Style the top navigation bar
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+} */
+
+/* Style the topnav links */
+/* .topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+} */
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.row{
+  background-color: rgba( 66, 72,123,1);
+}
+button{
+  background-color: rgba(179,179, 83,1);
+  box-shadow: 0 2px #898900;
+  transition-duration: 0.4s;
+}
+
+button:hover{
+  background-color: #E0E019;
+  color: #0B135F;
+}
+
+button:active{
+  transform: translateY(2px);
+  box-shadow: 0;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 71%;
+  padding: 10px;
+  margin: 2%;
+  background-color:rgba( 66, 72,123,1)
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 21%;
+  margin: 2%;
+  background-color: rgba( 66, 72,123,1);
+  padding: 10px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  color: white;
+  background-color: #242F9B;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#Letters{
+  margin: auto;
+  font-size: 40px;
+  letter-spacing: .5em;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: rgba(179,179, 83,1);;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+      float: none;
+      width: 100%;
+  }
+}
+
+.rgba-primary-0 { color: rgba( 66, 72,123,1) }	/* Main Primary color */
+.rgba-primary-1 { color: rgba(142,146,179,1) }
+.rgba-primary-2 { color: rgba( 99,104,149,1) }
+.rgba-primary-3 { color: rgba( 44, 50,102,1) }
+.rgba-primary-4 { color: rgba( 22, 28, 76,1) }
+
+.rgba-secondary-1-0 { color: rgba(179,179, 83,1) }	/* Main Secondary color (1) */
+.rgba-secondary-1-1 { color: rgba(255,255,194,1) }
+.rgba-secondary-1-2 { color: rgba(216,216,132,1) }
+.rgba-secondary-1-3 { color: rgba(148,148, 50,1) }
+.rgba-secondary-1-4 { color: rgba(110,110, 20,1) }
+
+.rgba-secondary-2-0 { color: rgba(179,119, 83,1) }	/* Main Secondary color (2) */
+.rgba-secondary-2-1 { color: rgba(255,217,194,1) }
+.rgba-secondary-2-2 { color: rgba(216,164,132,1) }
+.rgba-secondary-2-3 { color: rgba(148, 87, 50,1) }
+.rgba-secondary-2-4 { color: rgba(110, 54, 20,1) }
+
