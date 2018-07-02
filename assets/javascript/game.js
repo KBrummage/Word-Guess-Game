@@ -1,17 +1,18 @@
 //Array of Objects of Tech Companies and their Slogans for Hints...
 var techComps = [
-  {name: "Apple",
+  {name: "apple",
   gameLines: "_____",
   slogan: "Think Different"},
-  {name: "Hewlett-Packard Company",
+  {name: "hewlett-packard company",
   gameLines: "_______-_______ _______",
   slogan: "Make IT Matter"},
-  {name: "IBM",
+  {name: "ibm",
   slogan: "THINK"}
 ]
 
 
-var puzzleArr = [];  //Do I need this?
+var puzzleArr = []; 
+var solutionArr = [];
 var puzzleLine = "";
 
 //Hit the start Button!
@@ -34,6 +35,7 @@ document.onclick = function (){
     for (var k = 0; k < AnswerName.length; k++){
       puzzleArr.push("_");
     }
+    solutionArr = AnswerName.toLowerCase().split('');
     puzzleLine = puzzleArr.join('');
     document.getElementById("Letters").innerHTML = puzzleLine;
   
@@ -50,8 +52,13 @@ document.onclick = function (){
 //when someone hits a button...(or presses a button?...)
 document.onkeyup = function(event){
   var userGuess = event.key;
-  //make a temp array of the name.  (When's it's empty, they win!)
-  //toggle button press by using letter as id...
+  
+
+
+for (var m = 0; m < alphaOptions.length; m++){
+  if(userGuess.toLowerCase() == alphaOptions[m])
+{
+
 
   //library of possible entries
   
@@ -65,18 +72,22 @@ document.onkeyup = function(event){
   }
                       console.log(userGuess + "<--userGuess");
                       console.log(tempAlpha);
+
+    //if one of the letters, show them.
+    for (var l = 0; l < puzzleArr.length; l++){
+      if (userGuess.toLowerCase() == solutionArr[l].toLowerCase()){
+        puzzleArr.splice(l, 1, userGuess);
+      }
+    }
+    console.log(puzzleArr);
+    puzzleLine = puzzleArr.join('');
+    document.getElementById("Letters").innerHTML = puzzleLine;
+    console.log(puzzleLine + "<--puzzleLine");
   //mark it off the grid.
   alphaOptions = tempAlpha;
                       console.log(alphaOptions);
 
-  //if one of the letters, show them.
-    for (var l = 0; l < puzzleArr.length; l++){
-      if (userGuess.toLowerCase() === puzzleArr[i].toLowerCase){
-        puzzleArr.splice(i, 1, userGuess);
-      }
-    }
-    puzzleLine = puzzleArr.join('');
-    document.getElementById("Letters").innerHTML = puzzleLine;
+
     //replace the _ with the letter (loop).
     //delete each instance of the letter in the temp array.
 
@@ -89,7 +100,7 @@ document.onkeyup = function(event){
   }
 }
   
+}}
 }
-  
 }
 } // End of start button.
