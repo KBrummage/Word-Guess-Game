@@ -35,10 +35,18 @@ document.onclick = function (){
       puzzleArr.push("_");
     }
     puzzleLine = puzzleArr.join('');
-    document.getElementById
-
+    document.getElementById("Letters").innerHTML = puzzleLine;
+  
+    var alphaOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    
 //going to need an array of numbers for each comp. to show how many _ _ _ to put down?  
-
+                    console.log(techComps + "<--array of companies");
+                    console.log(randTechCompArrayInt + "<--random integer");
+                    console.log(AnswerCompany + "<-- The picked company object");
+                    console.log(AnswerName + "<--AnswerName");
+                    console.log(puzzleArr + "<--solutionArray");
+                    console.log(puzzleLine + "<--puzzle line");
+                    console.log(alphaOptions + "<-- array of letters")
 //when someone hits a button...(or presses a button?...)
 document.onkeyup = function(event){
   var userGuess = event.key;
@@ -46,22 +54,29 @@ document.onkeyup = function(event){
   //toggle button press by using letter as id...
 
   //library of possible entries
-  var alphaOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  
   //see if the button is an alphabet, and hasn't been hit...
   var tempAlpha = [];
-  for (var i = 0; i < tempAlpha.length; i++){
+  for (var i = 0; i < alphaOptions.length; i++){
     if (userGuess.toLowerCase() != alphaOptions[i]){
       tempAlpha.push(alphaOptions[i]);
     }
     
   }
-
+                      console.log(userGuess + "<--userGuess");
+                      console.log(tempAlpha);
   //mark it off the grid.
   alphaOptions = tempAlpha;
-  
+                      console.log(alphaOptions);
 
   //if one of the letters, show them.
-    
+    for (var l = 0; l < puzzleArr.length; l++){
+      if (userGuess.toLowerCase() === puzzleArr[i].toLowerCase){
+        puzzleArr.splice(i, 1, userGuess);
+      }
+    }
+    puzzleLine = puzzleArr.join('');
+    document.getElementById("Letters").innerHTML = puzzleLine;
     //replace the _ with the letter (loop).
     //delete each instance of the letter in the temp array.
 

@@ -1,6 +1,6 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 body {
   font-family: 'Bangers', cursive;
@@ -12,6 +12,7 @@ body {
 .header {
   position: relative;
   padding: 5px;
+  height: 130px;
   margin-top: 0;
   width: 100%;
   text-align: center;
@@ -20,6 +21,7 @@ body {
 
 .header h1 {
   font-size: 50px;
+  height: 75px;
   /* padding: 10px; */
   /* margin: 10px; */
 }
@@ -47,6 +49,7 @@ body {
 }
 .row{
   background-color: rgba( 66, 72,123,1);
+  height: calc(100vh - 205px);
 }
 button{
   background-color: rgba(179,179, 83,1);
@@ -115,8 +118,8 @@ button:active{
 .footer {
   padding: 20px;
   text-align: center;
-  background: rgba(179,179, 83,1);;
-  margin-top: 20px;
+  background: rgba(179,179, 83,1);
+  height: 75px;
   width: 100%;
 }
 
