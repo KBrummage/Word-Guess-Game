@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
   <script src="assets/javascript/game.js"></script>
+
+
 </head>
 <body>
 
@@ -24,31 +26,29 @@
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-      <h2>Word Search</h2>
-      <h5>Guess the Name of the Tech Company!</h5>
+      <h2>Word Search  <span style="font-size: 1.75rem">-- Guess the Name of the Tech Company!</span></h2>
+      
       <img src="assets/images/hangMan.jpg">
-      <p>Some text..</p>
-      <p id="Letters">_______</p>
+      <p>Clue</p>
+      <p id="Letters"></p>
+      <p>Letters Left</p>
+      <span id="lettersLeft" style="letter-spacing: 1em; font-size: 2em;"></span>
     </div>
-    <!-- <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div> -->
+    
   </div>
   <div class="rightcolumn">
     <div class="card">
       <!-- <h2>Vitals</h2> -->
       <p style="margin: auto">Press the button below to start</p>
-      <button>Start The Game!</button><br>
+      <button id="startBtn" type="button" onclick="startFunction()">Start The Game!</button><br>
       <p>Type any letter to try to guess the name of the tech company!</p>
     </div>
     <div class="card">
       <h3>Vitals</h3>
       <hr>
       <p><span id="numChance">12</span> Chances left...</p>
+      <p><span id="numWins">-</span> Wins, &nbsp <span id="numLosses">_</span> Losses</p>
+      <p><span id="compLeft">12</span> Words on deck!</p>
       
     </div>
     <div class="card">
