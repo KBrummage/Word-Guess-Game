@@ -1,70 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href = "assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
   <script src="assets/javascript/game.js"></script>
 
 
 </head>
+
 <body>
+  <audio id ="boomLoss" src="assets/audio/218721__bareform__boom-bang.m4a"></audio>
+  <audio id='wooWin' src="assets/audio/wooHoo.wav"></audio>
 
-<div class="header">
-  <h1 class="color-primary-0">Tech Companies and the Hangman's Noose</h1>
-  <h2 class="color-primary-4"><em>How familiar are you with the top tech comapnies?</em></h2>
-</div>
+  <header>
+    <h1 class="color-primary-0">Tech Companies and the Hangman's Noose</h1>
+    <h2 class="color-primary-4">
+      <em>How familiar are you with the top tech comapnies?</em>
+    </h2>
+  </header>
 
-<!-- <div class="topnav">
- 
-</div> -->
-
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>Word Search  <span style="font-size: 1.75rem">-- Guess the Name of the Tech Company!</span></h2>
+  <main class="container">
+    <div class="item container card leftcolumn">
       
-      <img src="assets/images/hangMan.jpg">
-      <p>Clue</p>
-      <p id="Letters"></p>
-      <p>Letters Left</p>
-      <span id="lettersLeft" style="letter-spacing: 1em; font-size: 2em;"></span>
-    </div>
-    
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <!-- <h2>Vitals</h2> -->
-      <p style="margin: auto">Press the button below to start</p>
-      <button id="startBtn" type="button" onclick="startFunction()">Start The Game!</button><br>
-      <p>Type any letter to try to guess the name of the tech company!</p>
-    </div>
-    <div class="card">
-      <h3>Vitals</h3>
-      <hr>
-      <p><span id="numChance">12</span> Chances left...</p>
-      <p><span id="numWins">-</span> Wins, &nbsp <span id="numLosses">_</span> Losses</p>
-      <p><span id="compLeft">12</span> Words on deck!</p>
-      
-    </div>
-    <div class="card">
-      <h3><button id="hintBtn">Tap for hint!</button></h3>
-      <p>Some text..</p>
-    </div>
-  </div>
-</div>
+        <div class="screenCont">
+         <div>
+          <img id = "noose" src="assets/images/hangManInit.jpg"/>
+          </div>
+          <div class="btnCont">
+            <br>
+            <h2> Guess the Name of the Tech Company!
+            </h2>
+            <button id="startBtn" type="button" onclick="startFunction()">Start The Game!</button>
+            <div>
+              <h3>
+                Slogan:
+              </h3>
+              <p id="slogan"></p>
+            </div>
+          </div>
+        </div>
+        <br>
 
-<div class="footer">
-  <h2>Made by Ken Brummage, voting right reserved</h2>
-</div>
+        <div class= "lettersCont">
+          <p>Company's Name:</p>
+          <p id="Letters"></p>
+        </div>
+
+    </div>
+    <div class="item container rightcolumn">
+      <div class="card">
+        <p>
+          <span id="numChance"></span> Chances left...</p>
+      </div>
+      <div class= "card">
+          <p>
+          
+          <span id="numWins">_</span> <span id ="winCount">Wins, &nbsp</span>
+          <span id="numLosses">_</span> Losses</p>
+          </p>
+        </div>
+        <div class="card">
+          <span id="compLeft">12</span> <span id = "deck">Words on deck!</span></p>
+        </div>
+        <div class = "card">
+            <p>Letters Left:</p>
+            <p id="lettersLeft"></p>
+            <span style="letter-spacing: 1em; font-size: 2em;"></span>
+        </div>
+    </div>
+
+    </div>
+  </main>
+
+  <div class="footer">
+    <h2>Made by Ken Brummage, voting rights reserved</h2>
+  </div>
 
 </body>
-</html>
 
-</body>
 </html>
-
