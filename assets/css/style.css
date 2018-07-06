@@ -8,16 +8,12 @@ body {
   background: rgba( 66, 72,123,1);
   padding: 0;
   margin: 0;
-}
-#container, .leftcolumn{
-  display: flex;
-  flex-wrap: wrap;
+ flex: auto
 }
 
-header{
-  position: static;
+header{ 
   top: 0;
-  flex: 2, 2, auto;
+  /* flex: 0 100%; */
   width: 100vw;
   text-align: center;
   background:rgba(179, 179, 83,1);
@@ -26,21 +22,111 @@ header{
 main{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-content: center;
-  flex: 2, 2, auto;
-  justify-content: space-around; 
+  flex: auto;
+  justify-content: center; 
+}
+
+footer {
+  display: flex;
+  flex: 1, 100%;
+  bottom: 0;
+  justify-content: center;
+  background: rgba(179,179, 83,1);
+  width: 100%;
+}
+
+p{
+  font-size: 2rem;
+  letter-spacing: .1em;
+}
+
+button{
+  background-color: rgba(179,179, 83,1);
+  box-shadow: 0 2px #898900;
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+  transition-duration: 0.4s;
+  width: 50%;
+  height: 75px;
+}
+
+button:hover{
+  background-color: #E0E019;
+  color: #0B135F;
+}
+
+button:active{
+  transform: translateY(2px);
+  box-shadow: 0;
+}
+
+
+.leftcolumn {   
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  background-color:rgba( 66, 72,123,1);
+  flex: auto;
+  margin: 20px;
+  border: #E0E019 1px solid;
+
+  }
+  
+.rightcolumn {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 33%;
+  background-color: rgba( 66, 72,123,1);
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.empty{
+  display: flex;
+  flex: auto;
+}
+.rightcolumn > .card{
+  border: #E0E019 1px solid;
+  margin: 10px;
+}
+.card {
+  align-items: center;
+  justify-content: center;
+  border-radius: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  flex: auto;
+  color: white;
+  background-color: #242F9B;
+  text-align: center;
+  vertical-align: middle;
+  /* padding: 10px; */
 }
 
 .screenCont{
+  flex-direction: column;
   display: flex;
   justify-content: space-around;
-  align-content: center;
+  align-content: space-around;
   flex-wrap: wrap;
 }
 
-#lettersLeft {
+.btnCount{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  flex: auto;
+}
+
+
+.lettersCont{
+  margin: auto;
 }
 
 .unselected{
@@ -56,68 +142,19 @@ main{
   letter-spacing: .5em;
   color: greenyellow;
 }
-.btnCont{
+
+
+#lettersLeft {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-content: center;
+  flex-wrap: wrap;
 }
 
-p{
-  font-size: 2rem;
-  letter-spacing: .1em;
-}
-button{
-  background-color: rgba(179,179, 83,1);
-  box-shadow: 0 2px #898900;
-  transition-duration: 0.4s;
-  font-size: 2em;
- 
-}
-
-button:hover{
-  background-color: #E0E019;
-  color: #0B135F;
-}
-
-button:active{
-  transform: translateY(2px);
-  box-shadow: 0;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-margin: 2%;
-padding: 10px;
+#nooseBox{
+  align-self: center;
   
-  background-color:rgba( 66, 72,123,1)
-}
-
-/* Right column */
-.rightcolumn {
-  display: flex;
-  float: left;
-  flex-direction: column;
-  width: 21%;
-  margin: 2%;
-  background-color: rgba( 66, 72,123,1);
-  padding: 10px;
-  justify-content: space-around;
-}
-
-.card {
-  border-radius: 2%;
-  flex: auto;
-  color: white;
-  background-color: #242F9B;
-  padding: 10px;
-  margin: 2%;
-}
-
+  /* width: 30%; */
+  margin: auto;
+} 
 
 #Letters{
   margin: auto;
@@ -125,15 +162,6 @@ padding: 10px;
   letter-spacing: .5em;
 }
 
-/* Footer */
-.footer {
-  display: flex;
-  flex: 2, 2, auto;
-  bottom: 0;
-  justify-content: center;
-  background: rgba(179,179, 83,1);
-  width: 100%;
-}
 
 @media screen and (max-width: 1330px) {
   .rightcolumn {   
@@ -143,12 +171,12 @@ padding: 10px;
   }
 }
 
-
-
 @media screen and (max-width: 400px) {
   img{
     width: 80vw;  }
 }
+
+
 
 .rgba-primary-0 { color: rgba( 66, 72,123,1) }	/* Main Primary color */
 .rgba-primary-1 { color: rgba(142,146,179,1) }

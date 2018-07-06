@@ -25,49 +25,50 @@
     </h2>
   </header>
 
-  <main id="container">
+  <main>
+    <div class = "empty"></div>
     <div class="card leftcolumn">
-        <div class="screenCont">
-         <div>
-          <img id = "noose" src="assets/images/hangManInit.jpg"/>
-          </div>
-          <div class="btnCont">
-            <br>
-            <h2> Guess the Name of the Tech Company!
-            </h2>
+        <div class="card screenCont">         
+          <div class="btnCount">
+            <div class="empty"></div>
+            <h2> Guess the Name of the Tech Company!</h2>
             <div id="btnGoesHere">
             <button id="startBtn" type="button" onclick="startFunction()">Start The Game!</button>
-          </div>
+            </div>
+            <div class="empty"></div>
             <div>
               <h3>
                 Slogan:
               </h3>
               <p id="slogan"></p>
             </div>
+            <div class="empty"></div>
           </div>
+          <div id = "nooseBox">
+            <img id = "noose" src="assets/images/hangManInit.jpg"/>
+            </div>
         </div>
         <br>
-
-        <div class= "lettersCont">
+        <div class= "card lettersCont">
           <p>Company's Name:</p>
           <p id="Letters"></p>
         </div>
-
-    </div>
+      </div>
+      
     <div class="rightcolumn">
       <div class="card">
-        <p>
-          <span id="numChance"></span> Chances left...</p>
+        
+          <span id="numChance"></span> Chances left...
       </div>
       <div class= "card">
-          <p>
+         
           
           <span id="numWins">_</span> <span id ="winCount">Wins, &nbsp</span>
           <span id="numLosses">_</span> Losses</p>
-          </p>
+        
         </div>
         <div class="card">
-          <span id="compLeft">12</span> <span id = "deck">Words on deck!</span></p>
+          <span id="compLeft">12 </span> <span id = "deck">&nbspWords on deck!</span></p>
         </div>
         <div class = "card">
             <p>Letters Left:</p>
@@ -75,13 +76,13 @@
             <span style="letter-spacing: 1em; font-size: 2em;"></span>
         </div>
     </div>
-
+    <div class = "empty"></div>
     </div>
   </main>
 
-  <div class="footer">
+  <footer>
     <h2>Made by Ken Brummage, voting rights reserved</h2>
-  </div>
+  </footer>
 
 </body>
 
