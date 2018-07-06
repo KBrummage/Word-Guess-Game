@@ -9,12 +9,15 @@ body {
   padding: 0;
   margin: 0;
 }
+#container, .leftcolumn{
+  display: flex;
+  flex-wrap: wrap;
+}
 
 header{
   position: static;
   top: 0;
   flex: 2, 2, auto;
-  /* min-height: 100px; */
   width: 100vw;
   text-align: center;
   background:rgba(179, 179, 83,1);
@@ -23,17 +26,19 @@ header{
 main{
   display: flex;
   flex-direction: row;
+  align-content: center;
   flex: 2, 2, auto;
-  
   justify-content: space-around; 
 }
+
 .screenCont{
   display: flex;
   justify-content: space-around;
   align-content: center;
+  flex-wrap: wrap;
 }
 
-#lettersLeft{
+#lettersLeft {
   display: flex;
   flex-wrap: wrap;
 }
@@ -58,8 +63,6 @@ main{
   align-content: center;
 }
 
-
-
 p{
   font-size: 2rem;
   letter-spacing: .1em;
@@ -69,6 +72,7 @@ button{
   box-shadow: 0 2px #898900;
   transition-duration: 0.4s;
   font-size: 2em;
+ 
 }
 
 button:hover{
@@ -87,13 +91,17 @@ button:active{
 display: flex;
 flex-direction: column;
 justify-content: space-around;
+margin: 2%;
+padding: 10px;
   
   background-color:rgba( 66, 72,123,1)
 }
 
 /* Right column */
 .rightcolumn {
+  display: flex;
   float: left;
+  flex-direction: column;
   width: 21%;
   margin: 2%;
   background-color: rgba( 66, 72,123,1);
@@ -101,21 +109,15 @@ justify-content: space-around;
   justify-content: space-around;
 }
 
-
-
 .card {
   border-radius: 2%;
   flex: auto;
   color: white;
   background-color: #242F9B;
   padding: 10px;
-  margin: 10px;
- 
-  
+  margin: 2%;
 }
-img{
-  flex-grow: inherit;
-}
+
 
 #Letters{
   margin: auto;
@@ -123,38 +125,29 @@ img{
   letter-spacing: .5em;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* Footer */
 .footer {
   display: flex;
   flex: 2, 2, auto;
-  
+  bottom: 0;
   justify-content: center;
   background: rgba(179,179, 83,1);
-  /* height: 50px; */
   width: 100%;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
+@media screen and (max-width: 1330px) {
+  .rightcolumn {   
+      flex-direction: row;
       width: 100%;
-      padding: 0;
+      flex-wrap: wrap;
   }
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+
 @media screen and (max-width: 400px) {
-  .topnav a {
-      float: none;
-      width: 100%;
-  }
+  img{
+    width: 80vw;  }
 }
 
 .rgba-primary-0 { color: rgba( 66, 72,123,1) }	/* Main Primary color */
