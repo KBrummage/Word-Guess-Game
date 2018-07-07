@@ -48,8 +48,8 @@ button{
   font-family: 'Bangers', cursive;
   font-size: 2rem;
   transition-duration: 0.4s;
-  width: 50%;
-  height: 75px;
+  /* width: 50%; */
+  
 }
 
 button:hover{
@@ -105,7 +105,7 @@ button:active{
   background-color: #242F9B;
   text-align: center;
   vertical-align: middle;
-  /* padding: 10px; */
+
 }
 
 .screenCont{
