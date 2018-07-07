@@ -143,7 +143,6 @@ var startFunction = function () {
     document.onclick = function(event){
       userGuess = event.target.id;
       btnEvent(userGuess);
-      document.getElementById(userGuess).setAttribute( )
     }
 
     //when letter typed
