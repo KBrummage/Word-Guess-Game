@@ -8,16 +8,22 @@ body {
   background: rgba( 66, 72, 123, 1);
   padding: 0;
   margin: 0;
-  flex: auto
+  flex: auto;
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   top: 0;
   flex: auto;
   width: 100vw;
   text-align: center;
   background: rgba(179, 179, 83, 1);
+  justify-content: flex-end;
+  
 }
+
+
 
 main {
   display: flex;
@@ -183,6 +189,18 @@ button:focus.wrong {
   }
 }
 
+@media screen and (max-height: 900px) {
+  .leftcolumn {
+    margin: 0;
+  }
+  .rightcolumn {
+    margin: 0;
+  }
+  button {
+    font-size: 1rem;
+  }
+}
+
 @media screen and (max-width: 500px) {
   p {
     font-size: 1rem;
@@ -191,11 +209,15 @@ button:focus.wrong {
     font-size: 1rem;
   }
 }
-  @media screen and (max-width: 400px) {
+
+@media screen and (max-width: 400px) {
     img {
       width: 80vw;
     }
+    
   }
+
+
   .rgba-primary-0 {
     color: rgba( 66, 72, 123, 1)
   }
