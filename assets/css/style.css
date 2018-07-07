@@ -58,8 +58,19 @@ button:hover{
 
 button:active{
   transform: translateY(2px);
+  background-color: #242F9B;
   box-shadow: 0;
   color: transparent;
+}
+
+button:focus.right{
+  background-color: #242F9B;
+  color: greenyellow;
+}
+
+button:focus.wrong{
+  background-color: #242F9B;
+  color: red;
 }
 
 
@@ -173,6 +184,15 @@ button:active{
       flex-direction: row;
       width: 100%;
       flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .leftcolumn{
+    margin: 0;
+  }
+  .rightcolumn{
+    margin: 0;
   }
 }
 
