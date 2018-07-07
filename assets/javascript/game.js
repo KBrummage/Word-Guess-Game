@@ -124,7 +124,7 @@ var startFunction = function () {
     // creates a bunch of letter divs with id as it's letter and class as unselected.  It then adds them all to the lettersLeft div.
       for (var a = 0; a < alphaOptions.length; a++){
         var targetDiv = document.getElementById("lettersLeft");
-        var letterDiv = document.createElement("div");
+        var letterDiv = document.createElement("button");
         letterDiv.textContent = alphaOptions[a];
         var letterID = alphaOptions[a];
         letterDiv.setAttribute("class", "unselected");
@@ -134,11 +134,25 @@ var startFunction = function () {
 
 
     ////////////////////////////////////////////////////////
-    ///////////when someone hits a button...////////////////
+    ///////////when someone hits a keyboard button...///////
     ////////////////////////////////////////////////////////
-    document.onkeyup = function (event) {
+    
+    var userGuess = "";
+      
+        
+    document.onclick = function(event){
+      userGuess = event.target.id;
+      btnEvent(userGuess);
+    }
+
+    document.onkeyup = function(event){
+      userGuess = event.key;
+      btnEvent(userGuess);
+    }
+    
+    function btnEvent(userGuess) {
       //save the slected key.
-      var userGuess = event.key;
+      // var userGuess = event.key;
       //make an array to decide on length if it hit.
       var didItHit = [];
       //make an array to decide if we finished clue.
@@ -209,10 +223,10 @@ var startFunction = function () {
               document.getElementById("noose").setAttribute("src", "assets/images/hangManInit.jpg");
               //fix grammar if wins = 1
                 if(wins === 1){
-                  document.getElementById("winCount").innerText = "Win, ";
+                  document.getElementById("winCount").innerText = " Win, ";
                 }
                 else{
-                  document.getElementById("winCount").innerText = "Wins, ";
+                  document.getElementById("winCount").innerText = " Wins, ";
                 }
               //update win count
                 document.getElementById("numWins").innerHTML = wins;

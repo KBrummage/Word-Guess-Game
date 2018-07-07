@@ -47,10 +47,9 @@ button{
   box-shadow: 0 2px #898900;
   font-family: 'Bangers', cursive;
   font-size: 2rem;
-  transition-duration: 0.4s;
-  /* width: 50%; */
-  
+  transition-duration: 0.4s;  
 }
+
 
 button:hover{
   background-color: #E0E019;
@@ -60,7 +59,10 @@ button:hover{
 button:active{
   transform: translateY(2px);
   box-shadow: 0;
+  color: transparent;
 }
+
+
 
 
 .leftcolumn {   
@@ -86,10 +88,11 @@ button:active{
   justify-content: space-around;
 }
 
-.empty{
+/* .empty{
   display: flex;
   flex: auto;
-}
+} */
+
 .rightcolumn > .card{
   border: #E0E019 1px solid;
   margin: 10px;
@@ -134,11 +137,13 @@ button:active{
 }
 
 .wrong{
+  background-color: #242F9B;
   letter-spacing: .5em;
   color: red;
 }
 
 .right{
+  background-color: #242F9B;
   letter-spacing: .5em;
   color: greenyellow;
 }
