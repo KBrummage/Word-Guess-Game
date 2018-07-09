@@ -109,10 +109,10 @@ var startFunction = function () {
       document.getElementById("compLeft").innerHTML = techComps.length;
     //accounts for grammar when one left
       if(techComps.length === 1){
-        document.getElementById("deck").innerText = "Word left!";
+        document.getElementById("deck").innerText = " Word left!";
       }
       else{
-        document.getElementById("deck").innerText = "Words on deck!"
+        document.getElementById("deck").innerText = "  Words on deck!"
       }
     //create array of strings of possible letters
       var alphaOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
