@@ -221,8 +221,7 @@ var startFunction = function () {
                 wins++;
               //play sound reset image
               document.getElementById("wooWin").play();
-              document.getElementById("noose").setAttribute("src", "assets/images/hangManInit.jpg");
-              //fix grammar if wins = 1
+                chances = 6;              //fix grammar if wins = 1
                 if(wins === 1){
                   document.getElementById("winCount").innerText = " Win, ";
                 }
